@@ -1,0 +1,25 @@
+# Model checkpoints
+checkpoints/
+
+# Training runs (e.g. TensorBoard, logs)
+runs/
+
+# Prediction outputs
+preds/
+preds_atte/
+preds_dyn/
+preds_swin/
+
+# best_model
+*.pth
+
+# Ignore all .gz files
+*.gz
+
+# Optional: virtual environment
+venv/
+.env/
+
+# macOS / Windows junk
+.DS_Store
+Thumbs.db
