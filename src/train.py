@@ -22,20 +22,17 @@ def tta_inference(model, x):
     preds = []
 
     # original
-    preds.append(sliding_window_inference(x, (128,128,128), 1, model))
-
+    preds.append(sliding_window_inference(x, (96,96,96), 1, model))
     # flip x
     preds.append(torch.flip(
-        sliding_window_inference(torch.flip(x, dims=[2]), (128,128,128), 1, model),
+        sliding_window_inference(torch.flip(x, dims=[2]), (96,96,96), 1, model),
         dims=[2]
     ))
-
     # flip y
     preds.append(torch.flip(
-        sliding_window_inference(torch.flip(x, dims=[3]), (128,128,128), 1, model),
+        sliding_window_inference(torch.flip(x, dims=[3]), (96,96,96), 1, model),
         dims=[3]
     ))
-
     return torch.mean(torch.stack(preds), dim=0)
 
 
@@ -69,10 +66,10 @@ def train():
     scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(optimizer, 
                                                            mode='max', # dice 기준이면 max, loss기준이면 min
                                                            factor=0.5, 
-                                                           patience=8, 
+                                                           patience=3, 
                                                            verbose=True)
     #loss_fn = DiceFocalLoss(to_onehot_y=True, softmax=True, gamma=2.0) # Dice는 영역 맞춤인데, 영역보다 class 구분이 잘안되서 class 구분을 할 수 있는 CE로 변경해보기
-    ce_weight = torch.tensor([0.2, 1.2, 1.2, 1.2]).to(cfg["device"])
+    ce_weight = torch.tensor([0.2, 3.0, 2.5, 2.5]).to(cfg["device"])
     loss_fn = DiceCELoss(
         to_onehot_y=True, 
         softmax=True, 
@@ -87,6 +84,26 @@ def train():
     best_dice = 0
     patience = 0
 
+# -------------------------------------------------------------------
+#    resume_path = f"{output_dir}/checkpoints/epoch_97_6405_unet.pth"
+
+#    start_epoch = 0
+
+#    if os.path.exists(resume_path):
+#        print("🔄 Resume from checkpoint")
+
+#        checkpoint = torch.load(resume_path)
+
+#        model.load_state_dict(checkpoint["model"])
+#        optimizer.load_state_dict(checkpoint["optimizer"])
+#        scheduler.load_state_dict(checkpoint["scheduler"])
+
+#        start_epoch = checkpoint["epoch"] + 1
+
+#        print(f"Resume from epoch {start_epoch}")
+
+# ----------------------------------------------------------------
+
     torch.cuda.empty_cache()# 캐시 초기화
     for epoch in range(cfg["training"]["epochs"]):
         model.train()
@@ -98,10 +115,11 @@ def train():
             images = batch["image"].to(cfg["device"])
             labels = batch["label"].to(cfg["device"])
 
-
             optimizer.zero_grad()
             #probs = torch.softmax(outputs, dim=1)
             #print(probs.max())
+            #print(torch.unique(batch["label"]))
+            #print("class 3 voxel:", (batch["label"] == 3).sum())
 
             scaler = GradScaler() # 메모리 30~40% 감소, 속도 증가
             with autocast():
@@ -117,6 +135,9 @@ def train():
 
         #scheduler.step()
         writer.add_scalar("Loss/train", epoch_loss, epoch)
+        
+        #print("output mean:", outputs.mean().item())
+        #print("output std:", outputs.std().item())
 
         # validation
         model.eval()
@@ -127,29 +148,34 @@ def train():
                 val_images = val_batch["image"].to(cfg["device"])
                 val_labels = val_batch["label"].to(cfg["device"])
 
-                #val_outputs = sliding_window_inference(
-                #    val_images,
-                #    roi_size=cfg["data"]["roi_size"],
-                #    sw_batch_size=1,
-                #    predictor=model,
-                #    overlap=0.75
+                val_outputs = sliding_window_inference(
+                    val_images,
+                    roi_size=cfg["data"]["roi_size"],
+                    sw_batch_size=2,
+                    predictor=model,
+                    overlap=0.75
 
-                #) # TTA로 바꿔봄
-                val_outputs = tta_inference(model, val_images)
+                ) # TTA
+                #val_outputs = tta_inference(model, val_images)
 
                 # SwinUNTR은 확률기반이라 argmax를 쓰면 확률이 퍼져 있어 background로 쏠림
                 probs = torch.softmax(val_outputs, dim=1)
-                print("max prob:", probs.max())
-                print("tumor prob mean:", probs[:,1:].mean())
+                #print("max prob:", probs.max())
+                #print("tumor prob mean:", probs[:,1:].mean())
                 val_outputs = torch.argmax(probs, dim=1)
+
+                #print("BEFORE POST:", torch.unique(val_outputs))  # 🔥 여기
 
                 # argmax를 threshold로 수정
                 #tumor_prob = probs[:,1:,:,:,:].sum(dim=1)
                 #pred = (tumor_prob > 0.4).long()
+
                 # connected component 추가
                 #from monai.transforms import KeepLargestConnectedComponent
-                #post = KeepLargestConnectedComponent(applied_labels=[1])
-                #val_outputs = post(pred)
+                #post = KeepLargestConnectedComponent(applied_labels=[1,2,3], is_onehot=False)
+                #val_outputs = post(val_outputs)
+
+                #print("AFTER POST:", torch.unique(val_outputs))
 
                 # Dice 계산용 ont-hot
                 val_outputs = torch.nn.functional.one_hot(val_outputs, num_classes=cfg["model"]["out_channels"])
@@ -166,12 +192,17 @@ def train():
 
         # checkpoint
         os.makedirs(f"{output_dir}/checkpoints", exist_ok=True)
-        torch.save(model.state_dict(), f"{output_dir}/checkpoints/epoch_{epoch}.pth")
+        torch.save({
+            "epoch": epoch,
+            "model": model.state_dict(),
+            "optimizer": optimizer.state_dict(),
+            "scheduler": scheduler.state_dict(),
+        }, f"{output_dir}/checkpoints/epoch_{epoch}.pth")
 
         # best model
         if dice > best_dice:
             best_dice = dice
-            torch.save(model.state_dict(), f"{output_dir}/best_model_swin.pth")
+            torch.save(model.state_dict(), f"{output_dir}/best_model_dynunet.pth")
             print("saved the best model")
             patience = 0
         else:
