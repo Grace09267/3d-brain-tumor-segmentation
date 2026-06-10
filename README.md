@@ -1,99 +1,224 @@
-# Brain Tumor Segmentation with Clinical-Aware Evaluation
+# Brain Tumor Segmentation & Neuroanatomical RAG System
+MRI → Tumor Segmentation → Atlas Mapping → Brain Knowledge Base → RAG QA
+![Architecture](assets/architecture.png)
 
 ## 📌 프로젝트 개요
-본 프로젝트는 뇌종양 분할(segmentation)을 수행하고, 기존의 Dice score 중심 평가를 넘어 **임상적으로 의미 있는 분석**을 수행하는 것을 목표로 함
-일반적으로 segmentation 성능은 Dice score로 평가되지만, 본 프로젝트에서는 Dice가 유사하더라도 임상적으로는 전혀 다른 결과를 낼 수 있음을 보여줌
+본 프로젝트는 뇌종양 분할(Segmentation) 결과를 단순 Dice Score로 평가하는 것을 넘어, 종양이 실제로 어느 뇌 영역에 위치하는지 해석하고, 해당 뇌 영역의 기능 정보를 기반으로 환자 맞춤형 결과지와 질의응답(QA)을 제공하는 것을 목표로 한다.
+기존 연구들이 Segmentation 정확도 향상에 집중했다면, 본 프로젝트는 다음과 같은 관점에 집중하였다.
 
-## 📌 목표
-- nnUNet, DynUNet 기반 뇌종양 segmentation 수행
-- 단순 정확도(Dice)가 아닌 다음 지표를 포함한 분석:
-  - Volume error (종양 크기 차이)
-  - Spatial error (위치 오차)
-  - Boundary error (HD95)
-- MNI atlas 기반 해부학적 위치 분석
+* 임상적 해석 가능성 (Clinical Interpretability)
+* 설명 가능한 의료 AI (Explainable AI)
+* 환자 친화적 정보 제공
+* Neuroimaging + LLM + RAG 융합
 
-## 📌 방법
-### 모델
-- nnUNet (self-configuring baseline)
-- DynUNet (MONAI 기반)
-- 이외 UNet, AttentionUNet, SwinUNERT
+## 📌 프로젝트 목표
+* nnUNet, DynUNet 기반 뇌종양 Segmentation 수행
+* Dice 중심 평가의 한계 분석
+* Atlas 기반 해부학적 위치 분석
+* 뇌 영역 지식베이스 구축
+* 환자 맞춤형 결과지 생성
+* Neuroanatomical RAG 기반 QA 시스템 구축
+
+## 📌 전체 파이프라인
+
+MRI
+↓
+Brain Tumor Segmentation
+↓
+Clinical Evaluation
+* Dice
+* HD95
+* Volume Error
+* Center Distance
+↓
+MNI152 Registration
+↓
+Harvard-Oxford Atlas Mapping
+↓
+Top Brain Regions Extraction
+↓
+Brain Knowledge Base Construction(Wikipedia + BrainInfo)
+↓
+Metadata Generation (Qwen3-14B)
+↓
+Embedding
+↓
+FAISS Vector Database
+↓
+Patient Report Generation
+↓
+Interactive RAG QA
+
+## 📌 Segmentation 모델
+
+### 사용 모델
+* nnUNet
+* DynUNet
+* UNet
+* AttentionUNet
+* SwinUNETR
 
 ### 데이터셋
-- MSD Brain Tumor dataset (BRATS 형식)
+* MSD Brain Tumor Dataset
+* BRATS Format
 
 ### 전처리
-- nnUNet preprocessing pipeline
-- ANTs 기반 MNI152 공간 정합
+* nnUNet Preprocessing Pipeline
+* ANTs 기반 MNI152 Registration
 
 ## 📌 평가 지표
-| 지표 | 설명 |
-|------|------|
-| Dice | segmentation overlap |
-| HD95 | 경계 정확도 |
-| Volume Error | 종양 크기 차이 |
-| Center Distance | 위치 오차 |
-| Atlas Overlap | 해부학적 위치 분석 |
+
+| 지표              | 설명                   |
+| --------------- | -------------------- |
+| Dice            | Segmentation Overlap |
+| HD95            | Boundary Accuracy    |
+| Volume Error    | 종양 부피 차이             |
+| Center Distance | 종양 중심 위치 오차          |
+| Atlas Overlap   | 해부학적 위치 분석           |
 
 ## 📌 주요 결과
+
 ### 1. Dice는 비슷하지만 임상 결과는 다름
-- nnUNet vs DynUNet → Dice 유사
-- 하지만:
-  - HD95 차이 큼
-  - Volume 오차 큼
-  - 위치 오차 발생 (~27 voxel)
+* nnUNet vs DynUNet
+* Dice Score는 유사
+하지만
+* HD95 차이 존재
+* Volume Error 증가
+* 위치 오차 발생
 
-### 2️. 과도한 segmentation (Over-segmentation)
+### 2. 과도한 Segmentation
 | Class | GT (ml) | Pred (ml) |
-|------|--------|----------|
-| WT | 36.49 | 240.74 |
-| TC | 27.40 | 188.12 |
-| ET | 3.37 | 51.02 |
+| ----- | ------- | --------- |
+| WT    | 36.49   | 240.74    |
+| TC    | 27.40   | 188.12    |
+| ET    | 3.37    | 51.02     |
 
-👉 실제보다 최대 6배 이상 크게 예측
+실제보다 최대 6배 이상 크게 예측되는 사례 확인
 
-### 3️. 위치 오차
-- Center distance: 약 27 voxel
-- Dice가 높아도 실제 위치는 크게 어긋날 수 있음
+### 3. 위치 오차
+* Center Distance 약 27 voxel
 
-### 4️. Atlas 기반 분석 (MNI 공간)
-- 중심 위치: Right Occipital (Inferior)
-- 주요 포함 영역:
-1. Superior Temporal Gyrus, anterior division (18.2%)
-2. Parahippocampal Gyrus, posterior division (16.8%)
-3. Temporal Occipital Fusiform Cortex (14.9%)
-4. Temporal Fusiform Cortex, anterior division (11.5%)
-5. Lingual Gyrus (7.9%)
+Dice가 높아도 실제 종양 위치는 크게 벗어날 수 있음을 확인
 
-👉 중심 위치와 실제 분포 영역이 불일치
+### 4. Atlas 기반 분석
+종양 중심 위치
+* Right Occipital (Inferior)
+실제 주요 침범 영역
+1. Superior Temporal Gyrus, anterior division
+2. Parahippocampal Gyrus, posterior division
+3. Temporal Occipital Fusiform Cortex
+4. Temporal Fusiform Cortex, anterior division
+5. Lingual Gyrus
+
+중심 위치와 실제 종양 분포 영역이 일치하지 않을 수 있음을 확인
+
+## 📌 Brain Knowledge Base 구축
+Harvard-Oxford Atlas의 48개 뇌 영역에 대해
+
+### 데이터 수집
+* Wikipedia
+* BrainInfo
+
+### 자동 메타데이터 생성
+Qwen3-14B를 이용하여
+* Overview
+* Anatomical Location
+* Major Functions
+* Network Tags
+* Functional Tags
+* Clinical Tags
+를 구조화된 JSON 형태로 생성하였다.
+
+예시 기능 태그
+* Memory
+* Language
+* Emotion
+* Executive Function
+* Social Cognition
+* Visual Processing
+* Decision Making
+
+## 📌 Neuroanatomical RAG 시스템
+구축된 Brain Knowledge Base를 기반으로
+* SentenceTransformer Embedding
+* FAISS Vector Search
+를 수행하였다.
+
+### 환자 질문 예시
+* 기억력 저하가 발생할 수 있나요?
+* 얼굴을 잘 알아보지 못하겠어요.
+* 감정 조절이 어려워질 수 있나요?
+* 언어 기능에 문제가 생길 수 있나요?
+
+### QA 동작 방식
+1. 질문과 관련된 뇌 영역 검색
+2. 환자의 종양 침범 영역 추출
+3. 두 영역 간 관련성 비교
+4. 관련성 수준 판단
+* 높음
+* 중간
+* 낮음
+5. 환자 친화적 설명 생성
+
+## 📌 환자 맞춤형 결과지 생성
+
+Atlas 분석 결과와 Brain Knowledge Base를 이용하여 자동으로 결과지를 생성한다.
+
+포함 정보
+* 종양 위치
+* 주요 침범 영역
+* 기능 설명
+* 잠재적 증상
+* 환자 및 보호자 안내
+
+이를 통해 MRI 결과를 비전문가도 이해할 수 있는 형태로 변환하였다.
+
 
 ## 📌 핵심 인사이트
-> Dice score가 높다고 해서 임상적으로 신뢰할 수 있는 결과는 아니다.
+> Dice Score가 높다고 해서 임상적으로 신뢰할 수 있는 결과는 아니다.
 
-- Volume error가 매우 중요
-- 위치 오차 존재 가능
-- 큰 종양에서는 center 기반 위치 추정 한계
-- Atlas 기반 분석이 더 의미 있음
-
-## 📌 개선 시도
-- Connected component filtering 적용
-- 과도한 segmentation 일부 개선
-- 재학습 없이 성능 개선 가능
-
-## 📌 결론
-본 프로젝트는 기존 segmentation 평가의 한계를 분석하고, 다음과 같은 **임상 중심 평가 방법**을 제안한다:
-- Volume 기반 평가
-- 위치 기반 평가
-- 해부학적 해석
+본 프로젝트는
+* Volume Error
+* Spatial Error
+* Atlas-based Interpretation
+* Explainable AI
+관점의 중요성을 확인하였다.
+또한
+MRI → Tumor Segmentation → Atlas Mapping → Brain Knowledge Base → RAG QA
+까지 연결되는 End-to-End Neuroimaging AI Pipeline을 구축하였다.
 
 ## 📌 향후 계획
-- WT / TC / ET 클래스별 위치 분석
-- 모델 calibration
-- 자동 임상 리포트 생성
+* Explainable Brain Region Visualization
+* Multi-Atlas 지원
+* Clinical Validation
+* Multi-modal LLM 적용
 
 ## 🧩 사용 기술
-- PyTorch
-- MONAI
-- nnUNet
-- ANTs
-- Nilearn / Nibabel
-- FSL (MNI atlas)
+### Medical Imaging
+* PyTorch
+* MONAI
+* nnUNet
+* DynUNet
+* ANTs
+* Nibabel
+* Nilearn
+
+### Brain Atlas
+* Harvard-Oxford Atlas
+* MNI152
+
+### NLP / LLM
+* Qwen3-14B
+* Ollama
+
+### Retrieval
+* SentenceTransformers
+* FAISS
+
+### Data Sources
+* Wikipedia API
+* BrainInfo
+
+### Development
+* Python
+* Jupyter Notebook 
