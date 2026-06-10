@@ -1,6 +1,12 @@
 # Brain Tumor Segmentation & Neuroanatomical RAG System
-MRI → Tumor Segmentation → Atlas Mapping → Brain Knowledge Base → RAG QA
-![Architecture](assets/architecture.png)
+
+## Key Contributions
+- Brain tumor segmentation using nnUNet / DynUNet
+- Clinical-aware evaluation beyond Dice score
+- Atlas-based neuroanatomical interpretation
+- Brain region knowledge base construction using Qwen3-14B
+- Neuroanatomical Retrieval-Augmented Generation (RAG)
+- Patient-friendly report generation and QA system
 
 ## 📌 프로젝트 개요
 본 프로젝트는 뇌종양 분할(Segmentation) 결과를 단순 Dice Score로 평가하는 것을 넘어, 종양이 실제로 어느 뇌 영역에 위치하는지 해석하고, 해당 뇌 영역의 기능 정보를 기반으로 환자 맞춤형 결과지와 질의응답(QA)을 제공하는 것을 목표로 한다.
@@ -21,36 +27,13 @@ MRI → Tumor Segmentation → Atlas Mapping → Brain Knowledge Base → RAG QA
 
 ## 📌 전체 파이프라인
 
-MRI
-↓
-Brain Tumor Segmentation
-↓
-Clinical Evaluation
-* Dice
-* HD95
-* Volume Error
-* Center Distance
-↓
-MNI152 Registration
-↓
-Harvard-Oxford Atlas Mapping
-↓
-Top Brain Regions Extraction
-↓
-Brain Knowledge Base Construction(Wikipedia + BrainInfo)
-↓
-Metadata Generation (Qwen3-14B)
-↓
-Embedding
-↓
-FAISS Vector Database
-↓
-Patient Report Generation
-↓
-Interactive RAG QA
+MRI → Tumor Segmentation → Atlas Mapping → Brain Knowledge Base → RAG QA
+
+![Architecture](assets/architecture.png)
+
+MRI 영상으로부터 종양을 분할하고, Atlas 기반 해부학적 분석을 수행한 뒤,뇌 영역 지식베이스와 RAG를 결합하여환자 맞춤형 결과지와 QA 서비스를 제공하는 End-to-End Neuroimaging AI Pipeline
 
 ## 📌 Segmentation 모델
-
 ### 사용 모델
 * nnUNet
 * DynUNet
@@ -163,6 +146,14 @@ Qwen3-14B를 이용하여
 ## 📌 환자 맞춤형 결과지 생성
 
 Atlas 분석 결과와 Brain Knowledge Base를 이용하여 자동으로 결과지를 생성한다.
+
+## 📄 Patient Report Example
+
+![Patient Report](assets/report_example.png)
+
+## 💬 Neuroanatomical RAG QA Example
+
+![QA Example](assets/qa_example.png)
 
 포함 정보
 * 종양 위치
