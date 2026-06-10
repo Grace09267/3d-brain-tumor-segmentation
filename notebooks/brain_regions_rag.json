@@ -1,0 +1,1201 @@
+[
+  {
+    "index": 0,
+    "atlas_label": "Frontal Pole",
+    "metadata": {
+      "overview": "The frontal pole is the most anterior region of the frontal lobe, part of the prefrontal cortex, and involved in higher-order cognitive functions such as goal-directed behavior, abstract thinking, and self-awareness.",
+      "anatomical_location": "Anterior-most part of the frontal lobe, within the prefrontal cortex, located rostral to the genu of the corpus callosum.",
+      "major_functions": [
+        "Executive Function",
+        "Decision Making",
+        "Social Cognition",
+        "Abstract Reasoning"
+      ],
+      "network_tags": [
+        "Central Executive Network",
+        "Default Mode Network"
+      ],
+      "functional_tags": [
+        "Executive Function",
+        "Decision Making",
+        "Social Cognition",
+        "Self Awareness"
+      ],
+      "clinical_tags": [
+        "Addiction",
+        "Impulse Control Disorders"
+      ]
+    }
+  },
+  {
+    "index": 1,
+    "atlas_label": "Insular Cortex",
+    "metadata": {
+      "overview": "The insular cortex is a deeply folded region of the cerebral cortex involved in diverse functions including emotion, interoception, homeostasis, and social cognition. It is divided into anterior and posterior regions with distinct connectivity and cytoarchitectural features.",
+      "anatomical_location": "Deep within the lateral sulcus, bordered by the frontal, temporal, and parietal lobes, with the operculum covering its lateral surface.",
+      "major_functions": [
+        "Interoception",
+        "Emotion regulation",
+        "Homeostasis",
+        "Social cognition",
+        "Sensory integration"
+      ],
+      "network_tags": [
+        "Salience Network",
+        "Default Mode Network"
+      ],
+      "functional_tags": [
+        "Emotion",
+        "Interoception",
+        "Social Cognition",
+        "Self Awareness",
+        "Decision Making"
+      ],
+      "clinical_tags": [
+        "Anxiety",
+        "Depression",
+        "Addiction"
+      ]
+    }
+  },
+  {
+    "index": 2,
+    "atlas_label": "Superior Frontal Gyrus",
+    "metadata": {
+      "overview": "The superior frontal gyrus (SFG) is a prominent gyrus in the frontal lobe, bounded laterally by the superior frontal sulcus. It includes the medial frontal gyrus (MFG), which is critical for self-awareness and self-referential processing.",
+      "anatomical_location": "Dorsal surface of the frontal lobe, facing the thalamus and cingulate cortex",
+      "major_functions": [
+        "Self-awareness",
+        "Language processing",
+        "Executive functions (including working memory and organization)"
+      ],
+      "network_tags": [
+        "Default Mode Network",
+        "Central Executive Network"
+      ],
+      "functional_tags": [
+        "Self Awareness",
+        "Language",
+        "Executive Function",
+        "Emotion"
+      ],
+      "clinical_tags": [
+        "Depression"
+      ]
+    }
+  },
+  {
+    "index": 3,
+    "atlas_label": "Middle Frontal Gyrus",
+    "metadata": {
+      "overview": "The middle frontal gyrus is a key component of the dorsolateral prefrontal cortex, critical for executive control, working memory, and cognitive flexibility.",
+      "anatomical_location": "Dorsolateral surface of the frontal lobe, bordered by the inferior frontal sulcus (anterior), superior frontal sulcus (posterior), and precentral sulcus (medial).",
+      "major_functions": [
+        "Executive function",
+        "Working memory",
+        "Cognitive control",
+        "Decision-making"
+      ],
+      "network_tags": [
+        "Central Executive Network",
+        "Salience Network"
+      ],
+      "functional_tags": [
+        "Executive Function",
+        "Attention",
+        "Decision Making",
+        "Cognitive Control"
+      ],
+      "clinical_tags": [
+        "Depression",
+        "Anxiety"
+      ]
+    }
+  },
+  {
+    "index": 4,
+    "atlas_label": "Inferior Frontal Gyrus, pars triangularis",
+    "metadata": {
+      "overview": "The Inferior Frontal Gyrus, pars triangularis (BA45) is a key component of Broca's area, critical for language processing and speech production. It is involved in translating between languages and integrating sensory-motor information for articulation.",
+      "anatomical_location": "Left frontal lobe, within the inferior frontal gyrus, bounded by the lateral sulcus and inferior precentral sulcus.",
+      "major_functions": [
+        "Language processing",
+        "Speech production",
+        "Phonological translation"
+      ],
+      "network_tags": [
+        "Language Network",
+        "Sensorimotor Network"
+      ],
+      "functional_tags": [
+        "Language",
+        "Motor Control"
+      ],
+      "clinical_tags": []
+    }
+  },
+  {
+    "index": 5,
+    "atlas_label": "Inferior Frontal Gyrus, pars opercularis",
+    "metadata": {
+      "overview": "The pars opercularis of the inferior frontal gyrus is a key component of Broca's area, involved in language processing, speech production, and motor control of articulation. It is cytoarchitecturally defined as Brodmann area 44 and is part of the articulatory network, which integrates motor and sensory information for speech.",
+      "anatomical_location": "Located in the frontal lobe, on the lateral surface of the brain, bounded by the inferior frontal sulcus superiorly, the lateral sulcus inferiorly, and the inferior precentral sulcus posteriorly. It overlies the insular cortex.",
+      "major_functions": [
+        "Language processing",
+        "Speech production",
+        "Motor control of articulation"
+      ],
+      "network_tags": [
+        "Language Network",
+        "Sensorimotor Network"
+      ],
+      "functional_tags": [
+        "Language",
+        "Motor Control"
+      ],
+      "clinical_tags": []
+    }
+  },
+  {
+    "index": 6,
+    "atlas_label": "Precentral Gyrus",
+    "metadata": {
+      "overview": "The precentral gyrus is the primary motor cortex, responsible for generating voluntary movement through the corticospinal tract. It exhibits a somatotopic organization, with distinct regions controlling different body parts.",
+      "anatomical_location": "Posterior frontal lobe, lateral surface of cerebral hemispheres, anterior to the postcentral gyrus, bounded by the central sulcus, precentral sulcus, lateral sulcus, and paracentral lobule.",
+      "major_functions": [
+        "Voluntary motor control",
+        "Somatotopic representation of body parts",
+        "Corticospinal tract origin"
+      ],
+      "network_tags": [
+        "Sensorimotor Network"
+      ],
+      "functional_tags": [
+        "Motor Control"
+      ],
+      "clinical_tags": [
+        "Motor Dysfunction",
+        "Hemiparesis"
+      ]
+    }
+  },
+  {
+    "index": 7,
+    "atlas_label": "Temporal Pole",
+    "metadata": {
+      "overview": "The temporal pole is the anterior-most region of the temporal lobe, involved in social cognition, emotional processing, and integration of multisensory information.",
+      "anatomical_location": "Anterior portion of the temporal lobe, adjacent to the frontal and parietal lobes.",
+      "major_functions": [
+        "Social Cognition",
+        "Emotion Processing"
+      ],
+      "network_tags": [
+        "Default Mode Network",
+        "Salience Network"
+      ],
+      "functional_tags": [
+        "Emotion",
+        "Social Cognition"
+      ],
+      "clinical_tags": [
+        "Depression",
+        "Anxiety"
+      ]
+    }
+  },
+  {
+    "index": 8,
+    "atlas_label": "Superior Temporal Gyrus, anterior division",
+    "metadata": {
+      "overview": "The anterior division of the superior temporal gyrus (aSTG) is a critical region in the temporal lobe involved in auditory processing, language comprehension, and social cognition. It contains Wernicke's area and is associated with the 'Aha!' moment in insight-based problem solving.",
+      "anatomical_location": "Temporal lobe, lateral to the lateral sulcus, anterior to the superior temporal sulcus",
+      "major_functions": [
+        "Auditory processing",
+        "Language comprehension",
+        "Social cognition",
+        "Emotion perception from facial stimuli"
+      ],
+      "network_tags": [
+        "Auditory Network",
+        "Language Network"
+      ],
+      "functional_tags": [
+        "Audition",
+        "Language",
+        "Social Cognition",
+        "Attention"
+      ],
+      "clinical_tags": [
+        "Schizophrenia"
+      ]
+    }
+  },
+  {
+    "index": 9,
+    "atlas_label": "Superior Temporal Gyrus, posterior division",
+    "metadata": {
+      "overview": "The superior temporal gyrus (STG), posterior division, is a region of the temporal lobe containing the auditory cortex (Brodmann areas 41 and 42) and Wernicke's area (Brodmann area 22). It is involved in auditory processing, language comprehension, social cognition, and emotion perception.",
+      "anatomical_location": "Located in the temporal lobe, bounded by the lateral sulcus above, the superior temporal sulcus below, and an imaginary line from the preoccipital notch to the lateral sulcus posteriorly. Part of the posterior division of the STG.",
+      "major_functions": [
+        "Auditory processing (including tonotopic mapping)",
+        "Language comprehension",
+        "Social cognition (emotion perception in facial stimuli, social context processing)",
+        "Cocktail party effect (attending to speech in noisy environments)"
+      ],
+      "network_tags": [
+        "Auditory Network",
+        "Language Network"
+      ],
+      "functional_tags": [
+        "Audition",
+        "Language",
+        "Social Cognition",
+        "Emotion",
+        "Attention"
+      ],
+      "clinical_tags": [
+        "Schizophrenia"
+      ]
+    }
+  },
+  {
+    "index": 10,
+    "atlas_label": "Middle Temporal Gyrus, anterior division",
+    "metadata": {
+      "overview": "The middle temporal gyrus, anterior division, is a region of the temporal lobe involved in face recognition, emotional processing, and language functions such as accessing word meaning during reading. It is associated with Brodmann area 21 and is bounded by the superior and inferior temporal sulci.",
+      "anatomical_location": "Temporal lobe, situated between the superior temporal gyrus and inferior temporal gyrus, bounded by the superior temporal sulcus above, the inferior temporal sulcus below, and an imaginary line from the preoccipital notch to the lateral sulcus posteriorly.",
+      "major_functions": [
+        "Face recognition",
+        "Emotional processing (audio-visual)",
+        "Language (word meaning, reading)",
+        "Poem composition"
+      ],
+      "network_tags": [
+        "Language Network",
+        "Salience Network"
+      ],
+      "functional_tags": [
+        "Emotion",
+        "Language",
+        "Social Cognition"
+      ],
+      "clinical_tags": [
+        "Language Disorders"
+      ]
+    }
+  },
+  {
+    "index": 11,
+    "atlas_label": "Middle Temporal Gyrus, posterior division",
+    "metadata": {
+      "overview": "The middle temporal gyrus, posterior division, is a region of the temporal lobe involved in processes such as face recognition, emotional processing, language comprehension (especially reading and writing kanji), and poetic composition. Lesions in this area can lead to alexia and agraphia for kanji characters.",
+      "anatomical_location": "Temporal lobe, located between the superior and inferior temporal sulci, posterior to the lateral sulcus",
+      "major_functions": [
+        "Face and object recognition",
+        "Audio-visual emotional recognition",
+        "Language processing (reading/writing)",
+        "Poem composition"
+      ],
+      "network_tags": [
+        "Language Network",
+        "Salience Network"
+      ],
+      "functional_tags": [
+        "Social Cognition",
+        "Emotion",
+        "Language"
+      ],
+      "clinical_tags": []
+    }
+  },
+  {
+    "index": 12,
+    "atlas_label": "Middle Temporal Gyrus, temporooccipital part",
+    "metadata": {
+      "overview": "The middle temporal gyrus (MTG), temporooccipital part, is a region of the temporal lobe involved in semantic processing, facial recognition, audio-visual emotional recognition, and language tasks such as accessing word meaning and poem composition. It is associated with Brodmann area 21 and located between the superior and inferior temporal sulci.",
+      "anatomical_location": "Temporal lobe, between the superior temporal sulcus (above), inferior temporal sulcus (below), and an imaginary line from the preoccipital notch to the lateral sulcus (posteriorly).",
+      "major_functions": [
+        "Facial and object recognition",
+        "Audio-visual emotional processing",
+        "Semantic language comprehension",
+        "Poem composition"
+      ],
+      "network_tags": [
+        "Language Network",
+        "Visual Network"
+      ],
+      "functional_tags": [
+        "Language",
+        "Emotion",
+        "Memory",
+        "Social Cognition"
+      ],
+      "clinical_tags": []
+    }
+  },
+  {
+    "index": 13,
+    "atlas_label": "Inferior Temporal Gyrus, anterior division",
+    "metadata": {
+      "overview": "The Inferior Temporal Gyrus, anterior division, is a key region of the ventral visual stream involved in visual object recognition, face perception, and memory recall. It processes color, form, and visual stimuli to identify objects by comparing them to stored memories.",
+      "anatomical_location": "Located in the anterior portion of the inferior temporal gyrus, beneath the central temporal sulcus, within the temporal lobe.",
+      "major_functions": [
+        "Visual object recognition",
+        "Face perception",
+        "Processing of color and form",
+        "Memory recall and object identification"
+      ],
+      "network_tags": [
+        "Visual Network"
+      ],
+      "functional_tags": [
+        "Vision",
+        "Memory"
+      ],
+      "clinical_tags": []
+    }
+  },
+  {
+    "index": 14,
+    "atlas_label": "Inferior Temporal Gyrus, posterior division",
+    "metadata": {
+      "overview": "The Inferior Temporal Gyrus, posterior division, is a key region of the ventral stream in visual processing, critical for object recognition, face perception, and integrating visual features like color and form with memory systems.",
+      "anatomical_location": "Located in the temporal lobe, beneath the middle temporal gyrus, and connected to the inferior occipital gyrus; situated on the inferolateral surface of the temporal lobe, bounded by the inferior sulcus.",
+      "major_functions": [
+        "Visual object recognition",
+        "Face perception",
+        "Integration of visual form and color information",
+        "Memory recall for object identification"
+      ],
+      "network_tags": [
+        "Visual Network"
+      ],
+      "functional_tags": [
+        "Vision",
+        "Memory"
+      ],
+      "clinical_tags": []
+    }
+  },
+  {
+    "index": 15,
+    "atlas_label": "Inferior Temporal Gyrus, temporooccipital part",
+    "metadata": {
+      "overview": "The inferior temporal gyrus (temporooccipital part) is a key region of the ventral stream in visual processing, critical for object recognition, face perception, color/form processing, and memory recall. It integrates visual information from earlier cortical stages and contributes to identifying objects through comparison with stored memories.",
+      "anatomical_location": "Located in the temporal lobe, below the middle temporal gyrus, and connected to the inferior occipital gyrus. Situated along the inferolateral border of the temporal lobe, bounded by the inferior sulcus.",
+      "major_functions": [
+        "Visual object recognition",
+        "Face perception",
+        "Color and form processing",
+        "Memory recall"
+      ],
+      "network_tags": [
+        "Visual Network"
+      ],
+      "functional_tags": [
+        "Vision",
+        "Memory",
+        "Social Cognition"
+      ],
+      "clinical_tags": []
+    }
+  },
+  {
+    "index": 16,
+    "atlas_label": "Postcentral Gyrus",
+    "metadata": {
+      "overview": "The postcentral gyrus is a prominent gyrus in the lateral parietal lobe, housing the primary somatosensory cortex, which processes tactile sensory information through a somatotopic map known as the sensory homunculus.",
+      "anatomical_location": "Lateral parietal lobe, bounded by the central sulcus rostrally, postcentral sulcus caudally, lateral sulcus inferiorly, and the medial longitudinal fissure medially.",
+      "major_functions": [
+        "Processing somatosensory input (touch, pressure, pain, temperature)",
+        "Somatotopic representation of the body via the sensory homunculus"
+      ],
+      "network_tags": [
+        "Sensorimotor Network"
+      ],
+      "functional_tags": [
+        "Somatosensation",
+        "Motor Control"
+      ],
+      "clinical_tags": [
+        "Neuropathic Pain",
+        "Sensory Processing Disorders"
+      ]
+    }
+  },
+  {
+    "index": 17,
+    "atlas_label": "Superior Parietal Lobule",
+    "metadata": {
+      "overview": "The superior parietal lobule is a region of the parietal lobe involved in spatial orientation, visual and sensory processing, reasoning, working memory, and attention. It contains Brodmann areas 5 and 7 and is connected to multiple white matter pathways.",
+      "anatomical_location": "Located in the parietal lobe, bounded anteriorly by the postcentral sulcus, posteriorly by the parieto-occipital sulcus, and inferiorly by the intraparietal sulcus.",
+      "major_functions": [
+        "Spatial cognition",
+        "Visual perception",
+        "Working memory",
+        "Attention",
+        "Reasoning"
+      ],
+      "network_tags": [
+        "Dorsal Attention Network",
+        "Central Executive Network"
+      ],
+      "functional_tags": [
+        "Attention",
+        "Working Memory",
+        "Executive Function"
+      ],
+      "clinical_tags": []
+    }
+  },
+  {
+    "index": 18,
+    "atlas_label": "Supramarginal Gyrus, anterior division",
+    "metadata": {
+      "overview": "The supramarginal gyrus, anterior division, is part of the parietal lobe (Brodmann area 40), involved in somatosensory processing, spatial awareness, mirror neuron system, empathy (right hemisphere), and phonological language processing.",
+      "anatomical_location": "Located anterior to the angular gyrus, part of the inferior parietal lobule, bounded by the lateral sulcus.",
+      "major_functions": [
+        "Somatosensory processing",
+        "Spatial awareness",
+        "Mirror neuron system involvement",
+        "Empathy (right hemisphere)",
+        "Phonological language processing"
+      ],
+      "network_tags": [
+        "Language Network",
+        "Dorsal Attention Network"
+      ],
+      "functional_tags": [
+        "Language",
+        "Social Cognition",
+        "Attention",
+        "Emotion"
+      ],
+      "clinical_tags": []
+    }
+  },
+  {
+    "index": 19,
+    "atlas_label": "Supramarginal Gyrus, posterior division",
+    "metadata": {
+      "overview": "The supramarginal gyrus, posterior division, is part of the parietal lobe and Brodmann area 40. It is involved in language processing, somatosensory integration, spatial perception, empathy, and social cognition.",
+      "anatomical_location": "Located in the parietal lobe, part of the inferior parietal lobule, anterior to the angular gyrus, and bounded caudally by the lateral sulcus.",
+      "major_functions": [
+        "Somatosensory association processing (interpreting tactile data)",
+        "Spatial perception and limb location",
+        "Identification of postures and gestures (mirror neuron system)",
+        "Empathy and social cognition (right hemisphere)",
+        "Phonological word selection and linking words to meanings"
+      ],
+      "network_tags": [
+        "Language Network",
+        "Salience Network"
+      ],
+      "functional_tags": [
+        "Language",
+        "Social Cognition",
+        "Emotion",
+        "Sensorimotor Control"
+      ],
+      "clinical_tags": []
+    }
+  },
+  {
+    "index": 20,
+    "atlas_label": "Angular Gyrus",
+    "metadata": {
+      "overview": "A region in the parietal lobe involved in language processing, spatial cognition, attention, memory retrieval, and theory of mind. It is critical for reading, writing, and arithmetic functions, and lesions can lead to Gerstmann syndrome.",
+      "anatomical_location": "Posteroinferior parietal lobe, inferior parietal lobule, Brodmann area 39. Bounded by the supramarginal gyrus, intraparietal sulcus, parieto-occipital sulcus, and continuous with the superior/middle temporal gyri.",
+      "major_functions": [
+        "Language processing (reading, writing, interpretation)",
+        "Arithmetic and spatial cognition",
+        "Attention (spatiovisual and bottom-up strategies)",
+        "Memory retrieval",
+        "Theory of mind"
+      ],
+      "network_tags": [
+        "Language Network",
+        "Dorsal Attention Network"
+      ],
+      "functional_tags": [
+        "Language",
+        "Attention",
+        "Memory",
+        "Spatial Cognition",
+        "Theory of Mind"
+      ],
+      "clinical_tags": [
+        "Gerstmann Syndrome"
+      ]
+    }
+  },
+  {
+    "index": 21,
+    "atlas_label": "Lateral Occipital Cortex, superior division",
+    "metadata": {
+      "overview": "The Lateral Occipital Cortex, superior division is part of the extrastriate visual cortex, involved in higher-level visual processing such as object recognition, form perception, and spatial processing. It is a key region in the ventral stream of visual processing, contributing to 'what' pathway functions.",
+      "anatomical_location": "Superior division of the lateral occipital cortex, located in the occipital lobe, posterior to the calcarine sulcus and within the lateral occipital sulcus.",
+      "major_functions": [
+        "Vision",
+        "Object recognition",
+        "Form perception",
+        "Visuospatial processing"
+      ],
+      "network_tags": [
+        "Visual Network",
+        "Ventral Attention Network"
+      ],
+      "functional_tags": [
+        "Vision",
+        "Attention"
+      ],
+      "clinical_tags": []
+    }
+  },
+  {
+    "index": 22,
+    "atlas_label": "Lateral Occipital Cortex, inferior division",
+    "metadata": {
+      "overview": "The Lateral Occipital Cortex, inferior division is a region of the occipital lobe involved in high-level visual processing, including object recognition, form perception, and visuospatial processing. It is part of the extrastriate visual cortex and plays a role in the dorsal stream of visual processing.",
+      "anatomical_location": "Lateral occipital cortex, inferior division; located in the posterior portion of the occipital lobe, within the lateral occipital sulcus.",
+      "major_functions": [
+        "Visual object recognition",
+        "Visuospatial processing",
+        "Motion perception",
+        "Form analysis"
+      ],
+      "network_tags": [
+        "Visual Network",
+        "Dorsal Attention Network"
+      ],
+      "functional_tags": [
+        "Vision",
+        "Attention"
+      ],
+      "clinical_tags": [
+        "Visual agnosia",
+        "Cortical blindness"
+      ]
+    }
+  },
+  {
+    "index": 23,
+    "atlas_label": "Intracalcarine Cortex",
+    "metadata": {
+      "overview": "The Intracalcarine Cortex, part of the primary visual cortex (V1), processes visual information and serves as the initial stage for retinotopic mapping of the visual field. It relays information to higher visual areas via the ventral and dorsal streams, supporting object recognition, motion processing, and spatial awareness.",
+      "anatomical_location": "Occipital lobe, surrounding the calcarine fissure",
+      "major_functions": [
+        "Visual information processing",
+        "Retinotopic mapping",
+        "Integration of visual stimuli via ventral and dorsal streams"
+      ],
+      "network_tags": [
+        "Visual Network"
+      ],
+      "functional_tags": [
+        "Vision",
+        "Attention"
+      ],
+      "clinical_tags": []
+    }
+  },
+  {
+    "index": 24,
+    "atlas_label": "Frontal Medial Cortex",
+    "metadata": {
+      "overview": "The Frontal Medial Cortex (specifically the dorsomedial prefrontal cortex, dmPFC) is involved in social cognition, emotional regulation, self-awareness, decision-making, and moral judgments. It integrates social impressions, theory of mind, and empathy, while modulating fear, anxiety, and heart rate during stress.",
+      "anatomical_location": "Dorsomedial prefrontal cortex (dmPFC), including Brodmann areas 8, 9, 24, 32, and subregions like the dorsal anterior cingulate cortex (dACC), prelimbic, and infralimbic cortices.",
+      "major_functions": [
+        "Social cognition",
+        "Emotional regulation",
+        "Theory of mind",
+        "Decision making",
+        "Self-awareness",
+        "Morality judgments"
+      ],
+      "network_tags": [
+        "Default Mode Network",
+        "Salience Network"
+      ],
+      "functional_tags": [
+        "Social Cognition",
+        "Self Awareness",
+        "Emotion",
+        "Decision Making"
+      ],
+      "clinical_tags": [
+        "Anxiety",
+        "Bipolar Disorder"
+      ]
+    }
+  },
+  {
+    "index": 25,
+    "atlas_label": "Juxtapositional Lobule Cortex (formerly Supplementary Motor Cortex)",
+    "metadata": {
+      "overview": "The Juxtapositional Lobule Cortex (Supplementary Motor Area, SMA) is a midline region of the motor cortex involved in motor control, postural stability, bimanual coordination, and the initiation of internally generated movements. It projects directly to the spinal cord and is connected to thalamus, epithalamus, and subcortical structures like the caudate nucleus and putamen.",
+      "anatomical_location": "Midline surface of the hemisphere, anterior to the primary motor cortex leg representation, extending onto the medial wall.",
+      "major_functions": [
+        "Postural stabilization during stance or walking",
+        "Bimanual coordination",
+        "Control of internally generated movements",
+        "Coordination of movement sequences"
+      ],
+      "network_tags": [
+        "Sensorimotor Network",
+        "Salience Network"
+      ],
+      "functional_tags": [
+        "Motor Control",
+        "Executive Function"
+      ],
+      "clinical_tags": []
+    }
+  },
+  {
+    "index": 26,
+    "atlas_label": "Subcallosal Cortex",
+    "metadata": {
+      "overview": "The subcallosal cortex is a small triangular region on the medial surface of the hemisphere, adjacent to the cingulate gyrus and olfactory structures. It is part of the limbic lobe and periarcheocortex, with roles in emotional and autonomic regulation.",
+      "anatomical_location": "Medial surface of the frontal lobe, anterior to the subcallosal gyrus and adjacent to the cingulate gyrus and olfactory trigone.",
+      "major_functions": [
+        "Emotional regulation",
+        "Autonomic control",
+        "Mood modulation"
+      ],
+      "network_tags": [
+        "Default Mode Network",
+        "Salience Network"
+      ],
+      "functional_tags": [
+        "Emotion",
+        "Self Awareness"
+      ],
+      "clinical_tags": [
+        "Depression",
+        "Anxiety"
+      ]
+    }
+  },
+  {
+    "index": 27,
+    "atlas_label": "Paracingulate Gyrus",
+    "metadata": {
+      "overview": "The paracingulate gyrus is a brain region located on the medial surface of the superior frontal gyrus, adjacent to the cingulate sulcus. It is involved in higher-order cognitive and emotional processing.",
+      "anatomical_location": "Medial aspect of the superior frontal gyrus (SFG), near the cingulate sulcus",
+      "major_functions": [
+        "Self-awareness",
+        "Attention regulation",
+        "Social cognition"
+      ],
+      "network_tags": [
+        "Default Mode Network",
+        "Salience Network"
+      ],
+      "functional_tags": [
+        "Self Awareness",
+        "Attention",
+        "Social Cognition"
+      ],
+      "clinical_tags": [
+        "Depression",
+        "Anxiety"
+      ]
+    }
+  },
+  {
+    "index": 28,
+    "atlas_label": "Cingulate Gyrus, anterior division",
+    "metadata": {
+      "overview": "The anterior division of the cingulate gyrus (ACC) is a critical component of the limbic system, involved in emotion regulation, attention, executive control, and interoception. It integrates cognitive, emotional, and physiological processes.",
+      "anatomical_location": "Medial frontal lobe, superior to the corpus callosum, within the cingulate gyrus and limbic lobe.",
+      "major_functions": [
+        "Emotion regulation",
+        "Attentional control",
+        "Executive function",
+        "Interoception",
+        "Error detection"
+      ],
+      "network_tags": [
+        "Default Mode Network",
+        "Salience Network"
+      ],
+      "functional_tags": [
+        "Emotion",
+        "Attention",
+        "Executive Function",
+        "Interoception",
+        "Decision Making"
+      ],
+      "clinical_tags": [
+        "Anxiety",
+        "Depression",
+        "Addiction"
+      ]
+    }
+  },
+  {
+    "index": 29,
+    "atlas_label": "Cingulate Gyrus, posterior division",
+    "metadata": {
+      "overview": "The posterior division of the cingulate gyrus is a key component of the limbic lobe, involved in emotional regulation, self-awareness, and memory processing. It serves as a hub for integrating sensory, emotional, and cognitive information.",
+      "anatomical_location": "Located in the posterior portion of the cingulate gyrus, within the medial surface of the cerebral hemispheres, adjacent to the parietal and occipital lobes.",
+      "major_functions": [
+        "Memory retrieval",
+        "Self-awareness",
+        "Emotional processing"
+      ],
+      "network_tags": [
+        "Default Mode Network",
+        "Salience Network"
+      ],
+      "functional_tags": [
+        "Memory",
+        "Self Awareness",
+        "Emotion"
+      ],
+      "clinical_tags": [
+        "Depression",
+        "Anxiety",
+        "Addiction"
+      ]
+    }
+  },
+  {
+    "index": 30,
+    "atlas_label": "Precuneous Cortex",
+    "metadata": {
+      "overview": "The precuneus is a medial parietal region involved in self-awareness, episodic memory, visuospatial processing, and aspects of consciousness. It contains three subdivisions with distinct connectivity patterns and is a key hub in the Default Mode Network.",
+      "anatomical_location": "Medial surface of each brain hemisphere, located anterior to the cuneus and posterior to the marginal branch of the cingulate sulcus.",
+      "major_functions": [
+        "Self-awareness",
+        "Episodic memory",
+        "Visuospatial processing",
+        "Itch sensation processing"
+      ],
+      "network_tags": [
+        "Default Mode Network",
+        "Visual Network"
+      ],
+      "functional_tags": [
+        "Self Awareness",
+        "Memory",
+        "Visuospatial Processing"
+      ],
+      "clinical_tags": []
+    }
+  },
+  {
+    "index": 31,
+    "atlas_label": "Cuneal Cortex",
+    "metadata": {
+      "overview": "The cuneus is a region of the occipital lobe, bounded anteriorly by the parieto-occipital sulcus and inferiorly by the calcarine sulcus. It is primarily involved in basic visual processing, receiving input from the superior quadrantic retina and projecting to extrastriate cortices. Its function is modulated by attention, working memory, and reward expectation.",
+      "anatomical_location": "Occipital lobe, mesial aspect, bounded by the parieto-occipital sulcus anteriorly and calcarine sulcus inferiorly.",
+      "major_functions": [
+        "Basic visual processing",
+        "Mid-level visual processing modulated by attention and working memory"
+      ],
+      "network_tags": [
+        "Visual Network"
+      ],
+      "functional_tags": [
+        "Vision",
+        "Attention",
+        "Working Memory"
+      ],
+      "clinical_tags": [
+        "Depression",
+        "Addiction"
+      ]
+    }
+  },
+  {
+    "index": 32,
+    "atlas_label": "Frontal Orbital Cortex",
+    "metadata": {
+      "overview": "The orbitofrontal cortex (OFC) is a prefrontal region involved in decision-making, emotion, reward processing, and sensory integration. It receives inputs from sensory modalities and connects with the amygdala, striatum, and medial temporal lobe.",
+      "anatomical_location": "Located in the frontal lobes, immediately above the orbits (eye sockets), within the ventral surface of the frontal lobe.",
+      "major_functions": [
+        "Decision Making",
+        "Emotion",
+        "Interoception",
+        "Reward Processing"
+      ],
+      "network_tags": [
+        "Salience Network",
+        "Default Mode Network"
+      ],
+      "functional_tags": [
+        "Emotion",
+        "Decision Making",
+        "Interoception",
+        "Social Cognition"
+      ],
+      "clinical_tags": [
+        "Addiction",
+        "Depression",
+        "Anxiety"
+      ]
+    }
+  },
+  {
+    "index": 33,
+    "atlas_label": "Parahippocampal Gyrus, anterior division",
+    "metadata": {
+      "overview": "The parahippocampal gyrus, anterior division, is a cortical region of the limbic system involved in memory encoding and retrieval, scene recognition via the parahippocampal place area (PPA), and social context processing, including detection of sarcasm.",
+      "anatomical_location": "Temporal lobe, surrounding the hippocampus; includes the perirhinal and entorhinal cortices.",
+      "major_functions": [
+        "Memory encoding and retrieval",
+        "Scene recognition",
+        "Social context processing"
+      ],
+      "network_tags": [
+        "Limbic Network",
+        "Visual Network"
+      ],
+      "functional_tags": [
+        "Memory",
+        "Vision",
+        "Social Cognition"
+      ],
+      "clinical_tags": []
+    }
+  },
+  {
+    "index": 34,
+    "atlas_label": "Parahippocampal Gyrus, posterior division",
+    "metadata": {
+      "overview": "The parahippocampal gyrus, posterior division is a cortical region of the limbic system involved in memory encoding/retrieval, scene recognition via the parahippocampal place area (PPA), and social context processing (e.g., detecting sarcasm). It is associated with hippocampal sclerosis and structural asymmetry in schizophrenia.",
+      "anatomical_location": "Temporal lobe, surrounding the hippocampus; part of the limbic system and parahippocampal cortex.",
+      "major_functions": [
+        "Scene recognition",
+        "Social context processing",
+        "Memory encoding and retrieval"
+      ],
+      "network_tags": [
+        "Visual Network",
+        "Limbic Network"
+      ],
+      "functional_tags": [
+        "Memory",
+        "Vision",
+        "Social Cognition"
+      ],
+      "clinical_tags": [
+        "Hippocampal sclerosis",
+        "Schizophrenia"
+      ]
+    }
+  },
+  {
+    "index": 35,
+    "atlas_label": "Lingual Gyrus",
+    "metadata": {
+      "overview": "The lingual gyrus is a brain region in the occipital lobe, involved in visual processing, visual memory, and word recognition. It plays a role in encoding complex images, processing visual information about faces, and modulating visual stimuli such as letters. It is also associated with visual snow syndrome due to hypermetabolism.",
+      "anatomical_location": "Located in the occipital lobe, the lingual gyrus lies between the calcarine sulcus and the posterior part of the collateral sulcus, extending toward the occipital pole and connecting to the parahippocampal gyrus on the temporal lobe.",
+      "major_functions": [
+        "Visual processing",
+        "Visual memory encoding",
+        "Word and letter recognition",
+        "Selective visual attention",
+        "Semantic processing"
+      ],
+      "network_tags": [
+        "Visual Network"
+      ],
+      "functional_tags": [
+        "Vision",
+        "Memory",
+        "Language",
+        "Attention"
+      ],
+      "clinical_tags": [
+        "Visual snow syndrome"
+      ]
+    }
+  },
+  {
+    "index": 36,
+    "atlas_label": "Temporal Fusiform Cortex, anterior division",
+    "metadata": {
+      "overview": "The anterior division of the Temporal Fusiform Cortex is a part of the fusiform gyrus, involved in high-level visual processing, particularly face and object recognition. It is located in the temporal and occipital lobes, delineated by the collateral and occipitotemporal sulci. The region is associated with conditions such as prosopagnosia, dyslexia, and synesthesia.",
+      "anatomical_location": "Temporal and occipital lobes, delineated by the collateral sulcus (CoS) and occipitotemporal sulcus (OTS), with the mid-fusiform sulcus (MFS) dividing it into lateral and medial portions.",
+      "major_functions": [
+        "Face and object recognition",
+        "Color information processing",
+        "Visual stimulus recognition"
+      ],
+      "network_tags": [
+        "Visual Network",
+        "Salience Network"
+      ],
+      "functional_tags": [
+        "Vision",
+        "Social Cognition"
+      ],
+      "clinical_tags": [
+        "Prosopagnosia",
+        "Dyslexia",
+        "Synesthesia"
+      ]
+    }
+  },
+  {
+    "index": 37,
+    "atlas_label": "Temporal Fusiform Cortex, posterior division",
+    "metadata": {
+      "overview": "The Temporal Fusiform Cortex, posterior division is part of the fusiform gyrus, located in the ventral temporal cortex. It is involved in high-level vision, color processing, and face recognition, and is associated with neurological conditions such as prosopagnosia, dyslexia, and synesthesia.",
+      "anatomical_location": "Bilateral region between the lingual gyrus and parahippocampal gyrus above, and the inferior temporal gyrus below; delineated by the collateral sulcus and occipitotemporal sulcus.",
+      "major_functions": [
+        "Face and object recognition",
+        "Color information processing",
+        "High-level visual processing"
+      ],
+      "network_tags": [
+        "Visual Network"
+      ],
+      "functional_tags": [
+        "Vision",
+        "Social Cognition"
+      ],
+      "clinical_tags": [
+        "Prosopagnosia",
+        "Dyslexia",
+        "Synesthesia"
+      ]
+    }
+  },
+  {
+    "index": 38,
+    "atlas_label": "Temporal Occipital Fusiform Cortex",
+    "metadata": {
+      "overview": "The Temporal Occipital Fusiform Cortex (fusiform gyrus) is a brain region involved in high-level visual processing, particularly face recognition, object identification, and color information processing. It is located at the junction of the temporal and occipital lobes, bounded by the collateral and occipitotemporal sulci.",
+      "anatomical_location": "Temporal and occipital lobes, delineated by the collateral sulcus (medially) and occipitotemporal sulcus (laterally). Part of the ventral temporal cortex.",
+      "major_functions": [
+        "Face processing (via fusiform face area)",
+        "Object recognition",
+        "Color information processing",
+        "Visual perception"
+      ],
+      "network_tags": [
+        "Visual Network"
+      ],
+      "functional_tags": [
+        "Vision",
+        "Object Recognition"
+      ],
+      "clinical_tags": [
+        "Dyslexia",
+        "Prosopagnosia",
+        "Synesthesia"
+      ]
+    }
+  },
+  {
+    "index": 39,
+    "atlas_label": "Occipital Fusiform Gyrus",
+    "metadata": {
+      "overview": "The occipital fusiform gyrus is a critical region in the ventral temporal cortex, involved in high-level visual processing, particularly face and object recognition. It is associated with conditions such as prosopagnosia, dyslexia, and synesthesia, and contains the fusiform face area (FFA), a key subregion for facial processing.",
+      "anatomical_location": "Located at the basal surface of the temporal and occipital lobes, bounded by the collateral sulcus (medially) and occipitotemporal sulcus (laterally). The mid-fusiform sulcus divides it into lateral and medial portions, with the FFA situated in the medial region.",
+      "major_functions": [
+        "Visual processing",
+        "Face recognition",
+        "Color information integration",
+        "Object recognition"
+      ],
+      "network_tags": [
+        "Visual Network"
+      ],
+      "functional_tags": [
+        "Vision",
+        "Memory",
+        "Social Cognition"
+      ],
+      "clinical_tags": [
+        "Prosopagnosia",
+        "Dyslexia",
+        "Synesthesia"
+      ]
+    }
+  },
+  {
+    "index": 40,
+    "atlas_label": "Frontal Operculum Cortex",
+    "metadata": {
+      "overview": "The Frontal Operculum Cortex is a region of the frontal lobe that overlies the rostrodorsal portion of the insula, involved in language processing, auditory functions, and interoceptive awareness.",
+      "anatomical_location": "Frontal lobe, rostrodorsal portion of the insula",
+      "major_functions": [
+        "Language processing",
+        "Auditory processing",
+        "Interoception"
+      ],
+      "network_tags": [
+        "Salience Network",
+        "Language Network"
+      ],
+      "functional_tags": [
+        "Language",
+        "Audition",
+        "Interoception"
+      ],
+      "clinical_tags": []
+    }
+  },
+  {
+    "index": 41,
+    "atlas_label": "Central Opercular Cortex",
+    "metadata": {
+      "overview": "The Central Opercular Cortex is a region of the brain located in the frontal lobe, forming part of the operculum that covers the anterior insula. It is involved in sensory integration, language processing, and motor control.",
+      "anatomical_location": "Frontal lobe, inferior frontal gyrus (IFG), overlying the anterior insula",
+      "major_functions": [
+        "Language processing",
+        "Interoception",
+        "Motor control"
+      ],
+      "network_tags": [
+        "Salience Network",
+        "Language Network"
+      ],
+      "functional_tags": [
+        "Language",
+        "Interoception",
+        "Motor Control"
+      ],
+      "clinical_tags": []
+    }
+  },
+  {
+    "index": 42,
+    "atlas_label": "Parietal Operculum Cortex",
+    "metadata": {
+      "overview": "The parietal operculum cortex (OPRpr) is a region of the supramarginal gyrus that overlies the caudal insula, involved in sensory integration and attentional processes.",
+      "anatomical_location": "Located in the parietal lobe, adjacent to the insula and within the supramarginal gyrus.",
+      "major_functions": [
+        "Sensory integration (somatosensory and auditory)",
+        "Attentional control",
+        "Multimodal perception"
+      ],
+      "network_tags": [
+        "Dorsal Attention Network",
+        "Sensorimotor Network"
+      ],
+      "functional_tags": [
+        "Attention",
+        "Audition",
+        "Somatosensation"
+      ],
+      "clinical_tags": []
+    }
+  },
+  {
+    "index": 43,
+    "atlas_label": "Planum Polare",
+    "metadata": {
+      "overview": "The Planum Polare is a region of the superior temporal gyrus near the temporal pole, involved in auditory processing and language comprehension.",
+      "anatomical_location": "Temporal bank of the lateral sulcus, within the superior temporal gyrus near the temporal pole.",
+      "major_functions": [
+        "Auditory processing",
+        "Semantic language comprehension"
+      ],
+      "network_tags": [
+        "Auditory Network",
+        "Language Network"
+      ],
+      "functional_tags": [
+        "Audition",
+        "Language"
+      ],
+      "clinical_tags": []
+    }
+  },
+  {
+    "index": 44,
+    "atlas_label": "Heschl's Gyrus (includes H1 and H2)",
+    "metadata": {
+      "overview": "Heschl's Gyrus, located in the lateral sulcus, is the primary auditory cortex involved in processing auditory information, including tone, speech sounds, and prediction errors (e.g., mismatch negativity). It also plays a role in spontaneous inner speech and language-related auditory processing.",
+      "anatomical_location": "Lateral sulcus (Brodmann areas 41 and 42)",
+      "major_functions": [
+        "Auditory processing",
+        "Speech sound perception",
+        "Prediction error detection (mismatch negativity)",
+        "Inner speech generation"
+      ],
+      "network_tags": [
+        "Auditory Network",
+        "Salience Network"
+      ],
+      "functional_tags": [
+        "Audition",
+        "Language"
+      ],
+      "clinical_tags": []
+    }
+  },
+  {
+    "index": 45,
+    "atlas_label": "Planum Temporale",
+    "metadata": {
+      "overview": "The planum temporale is a cortical region within the superior temporal gyrus, critical for language processing and auditory functions. It exhibits significant leftward asymmetry in most individuals and is a core component of Wernicke's area.",
+      "anatomical_location": "Superior surface of the superior temporal gyrus, adjacent to the Sylvian fissure and the parietal lobe.",
+      "major_functions": [
+        "Language comprehension",
+        "Auditory processing",
+        "Sound localization"
+      ],
+      "network_tags": [
+        "Language Network",
+        "Auditory Network"
+      ],
+      "functional_tags": [
+        "Language",
+        "Audition"
+      ],
+      "clinical_tags": []
+    }
+  },
+  {
+    "index": 46,
+    "atlas_label": "Supracalcarine Cortex",
+    "metadata": {
+      "overview": "The supracalcarine cortex, part of the primary visual cortex (V1), processes visual information with retinotopic organization and serves as the initial stage for both ventral (object recognition) and dorsal (motion/spatial processing) visual streams.",
+      "anatomical_location": "Occipital lobe, surrounding the calcarine fissure",
+      "major_functions": [
+        "Visual information processing",
+        "Retinotopic mapping of the visual field",
+        "Initial integration of visual stimuli via ventral and dorsal streams"
+      ],
+      "network_tags": [
+        "Visual Network",
+        "Dorsal Attention Network"
+      ],
+      "functional_tags": [
+        "Vision",
+        "Attention"
+      ],
+      "clinical_tags": []
+    }
+  },
+  {
+    "index": 47,
+    "atlas_label": "Occipital Pole",
+    "metadata": {
+      "overview": "The occipital pole is part of the occipital lobe, serving as the primary visual processing center, containing the primary visual cortex (V1) responsible for initial visual information processing.",
+      "anatomical_location": "Posterior cerebral cortex, specifically the caudal tip of the occipital lobe.",
+      "major_functions": [
+        "Visual processing",
+        "Motion perception",
+        "Color differentiation",
+        "Visuospatial processing"
+      ],
+      "network_tags": [
+        "Visual Network"
+      ],
+      "functional_tags": [
+        "Vision"
+      ],
+      "clinical_tags": [
+        "Cortical Blindness"
+      ]
+    }
+  }
+]
