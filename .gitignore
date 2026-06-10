@@ -23,3 +23,15 @@ venv/
 # macOS / Windows junk
 .DS_Store
 Thumbs.db
+
+__pycache__/
+.ipynb_checkpoints/
+
+*.pyc
+*.npy
+*.index
+
+outputs/
+
+.env
+.env.*
